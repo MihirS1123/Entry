@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b1e903e1a1.js" crossorigin="anonymous"></script>
+    <link rel="icon" sizes="192x192" href="Icon.png">
+    <title>Entry</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        iframe {
+            width: 100vw;
+            height: 31rem;
+            margin-top: 25px;
+        }
+
+        .H {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: blueviolet;
+            height: 50px;
+            width: 100%;
+            color: white;
+            padding: 0 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .dropdown {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 0;
+            background-color: #572ca3;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align: left;
+        }
+
+        .dropdown a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .dropdown a:hover {
+            background-color: blueviolet;
+        }
+
+        .menu-icon {
+            font-size: 1.8rem;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .title {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .title h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="H">
+        <div class="title">
+            <h1>Entry</h1>
+        </div>
+        <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
+    </div>
+
+    <div id="myDropdown" class="dropdown">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <a href="Sheet.html" target="_blank" onclick="toggleNav()">Sheet</a>
+    </div>
+
+    <div class="container">
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSc07p7f3gWpXp_WCCj7_0QvUlXWcl9Np2yJMuViiRTtcvYaQw/viewform?usp=header"
+            frameborder="0"></iframe>
+    </div>
+
+    <script>
+
+        window.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+
+        function toggleNav() {
+            var dropdown = document.getElementById("myDropdown");
+            dropdown.style.width = dropdown.style.width === "200px" ? "0" : "200px";
+        }
+    </script>
+</body>
+
+</html>
